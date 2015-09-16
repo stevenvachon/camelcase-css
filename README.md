@@ -1,11 +1,12 @@
 # camelcase-css [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][david-image]][david-url]
+
 > Convert a dash-separated CSS property to a camelCased DOM property.
 
 
 ## Installation
 [Node.js](http://nodejs.org/) `>= 0.10` is required. Type this at the command line:
 ```shell
-npm install camelcase-css --save-dev
+npm install camelcase-css
 ```
 
 
@@ -13,10 +14,10 @@ npm install camelcase-css --save-dev
 ```js
 var camelCaseCSS = require("camelcase-css");
 
-camelCaseCSS("-webkit-border-radius");  //=> WebkitBorderRadius
-camelCaseCSS("-moz-border-radius");     //=> MozBorderRadius
-camelCaseCSS("-ms-border-radius");      //=> msBorderRadius
-camelCaseCSS("border-radius");          //=> borderRadius
+camelCaseCSS("-webkit-border-radius");  //-> WebkitBorderRadius
+camelCaseCSS("-moz-border-radius");     //-> MozBorderRadius
+camelCaseCSS("-ms-border-radius");      //-> msBorderRadius
+camelCaseCSS("border-radius");          //-> borderRadius
 ```
 
 

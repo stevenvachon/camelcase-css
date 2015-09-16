@@ -12,6 +12,9 @@ function callback(dashChar, char)
 
 function camelCaseCSS(property)
 {
+	// NOTE :: IE8's "styleFloat" is intentionally not supported
+	if (property === "float") return "cssFloat";
+	
 	/*
 		Microsoft vendor-prefixed properties are camel cased
 		differently than other browsers:
