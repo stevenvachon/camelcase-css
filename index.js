@@ -12,6 +12,8 @@ function callback(dashChar, char)
 
 function camelCaseCSS(property)
 {
+	property = property.toLowerCase();
+
 	// NOTE :: IE8's "styleFloat" is intentionally not supported
 	if (property === "float") return "cssFloat";
 	
