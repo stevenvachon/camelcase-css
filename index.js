@@ -1,37 +1,29 @@
 "use strict";
-var pattern = /-(\w|$)/g;
+const pattern = /-(\w|$)/g;
+
+const callback = (dashChar, char) => char.toUpperCase();
 
 
 
-function callback(dashChar, char)
-{
-	return char.toUpperCase();
-}
-
-
-
-function camelCaseCSS(property)
+const camelCaseCSS = property =>
 {
 	property = property.toLowerCase();
 
 	// NOTE :: IE8's "styleFloat" is intentionally not supported
-	if (property === "float") return "cssFloat";
-	
-	/*
-		Microsoft vendor-prefixed properties are camel cased
-		differently than other browsers:
-		
-		-webkit-something => WebkitSomething
-		-moz-something => MozSomething
-		-ms-something => msSomething
-	*/
-	if (property.indexOf("-ms-") === 0)
+	if (property === "float")
 	{
-		property = property.substr(1);
+		return "cssFloat";
 	}
-	
-	return property.replace(pattern, callback);
-}
+	// Microsoft vendor-prefixes are uniquely cased
+	else if (property.indexOf("-ms-") === 0)
+	{
+		return property.substr(1).replace(pattern, callback);
+	}
+	else
+	{
+		return property.replace(pattern, callback);
+	}
+};
 
 
 

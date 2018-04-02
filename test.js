@@ -1,11 +1,10 @@
 "use strict";
-var camelCaseCSS = require("./");
-
-var expect = require("chai").expect;
-
+const camelCaseCSS = require("./");
+const {expect} = require("chai");
 
 
-it("should work", function(done)
+
+it("works", function()
 {
 	expect( camelCaseCSS("-webkit-border-radius") ).to.equal("WebkitBorderRadius");
 	expect( camelCaseCSS("-WEBKIT-BORDER-RADIUS") ).to.equal("WebkitBorderRadius");
@@ -18,6 +17,4 @@ it("should work", function(done)
 	expect( camelCaseCSS("BORDER-RADIUS")         ).to.equal("borderRadius");
 	
 	expect( camelCaseCSS("float") ).to.equal("cssFloat");
-	
-	done();
 });
