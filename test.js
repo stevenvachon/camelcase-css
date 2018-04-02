@@ -15,6 +15,7 @@ it("should work", function(done)
 	expect( camelCaseCSS("-ms-border-radius")     ).to.equal("msBorderRadius");
 	expect( camelCaseCSS("-MS-BORDER-RADIUS") ).to.equal("msBorderRadius");
 	expect( camelCaseCSS("border-radius")         ).to.equal("borderRadius");
+	expect( camelCaseCSS("BORDER-RADIUS")         ).to.equal("borderRadius");
 	
 	expect( camelCaseCSS("float") ).to.equal("cssFloat");
 	
