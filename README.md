@@ -1,6 +1,6 @@
 # camelcase-css [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
-> Convert a kebab-cased CSS property to a camelCased DOM property.
+> Convert a kebab-cased CSS property into a camelCased DOM property.
 
 
 ## Installation
