@@ -15,7 +15,7 @@ const camelCaseCSS = property =>
 		return "cssFloat";
 	}
 	// Microsoft vendor-prefixes are uniquely cased
-	else if (property.indexOf("-ms-") === 0)
+	else if (property.startsWith("-ms-"))
 	{
 		return property.substr(1).replace(pattern, callback);
 	}
