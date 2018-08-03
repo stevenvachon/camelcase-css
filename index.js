@@ -1,12 +1,11 @@
 "use strict";
-const pattern = /-(\w|$)/g;
+var pattern = /-(\w|$)/g;
 
-const callback = (dashChar, char) => char.toUpperCase();
+var callback = (dashChar, char) => char.toUpperCase();
 
 
 
-const camelCaseCSS = property =>
-{
+var camelCaseCSS = function (property) {
 	property = property.toLowerCase();
 
 	// NOTE :: IE8's "styleFloat" is intentionally not supported
