@@ -3,7 +3,7 @@ var pattern = /-(\w|$)/g;
 
 function callback(dashChar, char)
 {
-	char.toUpperCase();
+	return char.toUpperCase();
 };
 
 
