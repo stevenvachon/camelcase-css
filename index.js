@@ -1,11 +1,13 @@
 "use strict";
-const pattern = /-(\w|$)/g;
+var pattern = /-(\w|$)/g;
 
-const callback = (dashChar, char) => char.toUpperCase();
+function callback(dashChar, char)
+{
+	return char.toUpperCase();
+};
 
 
-
-const camelCaseCSS = property =>
+function camelCaseCSS(property) 
 {
 	property = property.toLowerCase();
 
