@@ -8,7 +8,7 @@
   "browser": "index-es5.js",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "@babel/core": "7.21.0",
     "babel-plugin-optimize-starts-with": "^1.0.1",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
